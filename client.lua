@@ -737,6 +737,7 @@ local invHotkeys = false
 ---@type function?
 local function registerCommands()
 	RegisterCommand('steal', openNearbyInventory, false)
+	RegisterCommand('rob', openNearbyInventory, false)
 
 	local function openGlovebox(vehicle)
 		if not IsPedInAnyVehicle(playerPed, false) or not NetworkGetEntityIsNetworked(vehicle) then return end
