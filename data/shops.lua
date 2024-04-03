@@ -165,5 +165,57 @@ return {
 		model = {
 			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
 		}
+	},
+
+	-- qb-mechanicjob shop
+	MechanicJobShop = {
+		name = 'Otto\'s Auto Parts',
+		blip = {
+			id = 72,
+			colour = 46,
+			scale = 0.8
+		},
+		groups = {
+			['mechanic'] = 0,
+			['mechanic2'] = 0,
+			['mechanic3'] = 0,
+			['beeker'] = 0,
+			['bennys'] = 0
+		},
+		inventory = {
+			{ name = 'veh_toolbox', 	  price = 500, 	count = 50},
+			{ name = 'veh_armor',         price = 5000, count = 50 },
+            { name = 'veh_brakes',        price = 5000, count = 50 },
+            { name = 'veh_engine',        price = 5000, count = 50 },
+            { name = 'veh_suspension',    price = 5000, count = 50 },
+            { name = 'veh_transmission',  price = 5000, count = 50 },
+            { name = 'veh_turbo',         price = 5000, count = 50 },
+            { name = 'veh_interior',      price = 5000, count = 50 },
+            { name = 'veh_exterior',      price = 5000, count = 50 },
+            { name = 'veh_wheels',        price = 5000, count = 50 },
+            { name = 'veh_neons',         price = 5000, count = 50 },
+            { name = 'veh_xenons',        price = 5000, count = 50 },
+            { name = 'veh_tint',          price = 5000, count = 50 },
+            { name = 'veh_plates',        price = 5000, count = 50 },
+            { name = 'nitrous',           price = 5000, count = 50 },
+            { name = 'tunerlaptop',       price = 5000, count = 50 },
+            { name = 'repairkit',         price = 5000, count = 50 },
+            { name = 'advancedrepairkit', price = 5000, count = 50 },
+            { name = 'tirerepairkit',     price = 5000, count = 50 },
+		},
+		targets = {
+			{
+				ped = 's_m_m_autoshop_02',
+				scenario = 'WORLD_HUMAN_CLIPBOARD',
+				loc = vec3(806.63, -814.52, 25.2),
+				heading = 86.37,
+			},
+			{
+				ped = 's_m_m_autoshop_02',
+				scenario = 'WORLD_HUMAN_CLIPBOARD',
+				loc = vec3(1930.19, 3721.37, 31.82),
+				heading = 206.87,
+			}
+		}
 	}
 }
