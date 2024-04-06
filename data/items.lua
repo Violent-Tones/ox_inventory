@@ -2187,4 +2187,15 @@ return {
 			image = "security_card_02.png",
 		}
 	},
+
+	["mdtcitation"] = {
+		label = "Citation",
+		weight = 1000,
+		stack = false,
+		close = true,
+		description = "Citation from a police officer!",
+		client = {
+			image = "citation.png",
+		}
+	},
 }
