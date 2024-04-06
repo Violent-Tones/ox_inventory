@@ -56,6 +56,7 @@ return {
 	['bandage'] = {
 		label = 'Bandage',
 		weight = 115,
+		description = 'For fixing boo boos',
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
@@ -224,11 +225,51 @@ return {
 	},
 
 	["veh_suspension"] = {
-		label = "Suspension",
+		label = "Lowered Suspension",
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Upgrade vehicle suspension",
+		description = "Upgrade vehicle suspension (Level 0)",
+		client = {
+			image = "veh_suspension.png",
+		}
+	},
+	["veh_suspension1"] = {
+		label = "Street Suspension",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle suspension (Level 1)",
+		client = {
+			image = "veh_suspension.png",
+		}
+	},
+	["veh_suspension2"] = {
+		label = "Sport Suspension",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle suspension (Level 2)",
+		client = {
+			image = "veh_suspension.png",
+		}
+	},
+	["veh_suspension3"] = {
+		label = "Competition Suspension",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle suspension (Level 3)",
+		client = {
+			image = "veh_suspension.png",
+		}
+	},
+	["veh_suspension4"] = {
+		label = "Illegal Suspension",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle suspension (Level 4)",
 		client = {
 			image = "veh_suspension.png",
 		}
@@ -576,11 +617,51 @@ return {
 	},
 
 	["veh_armor"] = {
-		label = "Armor",
+		label = "Armor (20%)",
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Upgrade vehicle armor",
+		description = "Upgrade vehicle armor (Level 0)",
+		client = {
+			image = "veh_armor.png",
+		}
+	},
+	["veh_armor1"] = {
+		label = "Armor (40%)",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle armor (Level 1)",
+		client = {
+			image = "veh_armor.png",
+		}
+	},
+	["veh_armor2"] = {
+		label = "Armor (60%)",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle armor (Level 2)",
+		client = {
+			image = "veh_armor.png",
+		}
+	},
+	["veh_armor3"] = {
+		label = "Armor (80%)",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle armor (Level 3)",
+		client = {
+			image = "veh_armor.png",
+		}
+	},
+	["veh_armor4"] = {
+		label = "Armor (100%)",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle armor (Level 4)",
 		client = {
 			image = "veh_armor.png",
 		}
@@ -807,11 +888,41 @@ return {
 	},
 
 	["veh_transmission"] = {
-		label = "Transmission",
+		label = "Street Transmission",
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Upgrade vehicle transmission",
+		description = "Upgrade vehicle transmission (Level 0)",
+		client = {
+			image = "veh_transmission.png",
+		}
+	},
+	["veh_transmission1"] = {
+		label = "Sports Transmission",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle transmission (Level 1)",
+		client = {
+			image = "veh_transmission.png",
+		}
+	},
+	["veh_transmission2"] = {
+		label = "Race Transmission",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle transmission (Level 2)",
+		client = {
+			image = "veh_transmission.png",
+		}
+	},
+	["veh_transmission3"] = {
+		label = "Illegal Transmission",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle transmission (Level 3)",
 		client = {
 			image = "veh_transmission.png",
 		}
@@ -887,10 +998,13 @@ return {
 		label = "Money Bag",
 		weight = 0,
 		stack = false,
-		close = true,
+		close = false,
 		description = "A bag with cash",
 		client = {
 			image = "moneybag.png",
+		},
+		server = {
+			export = 'qb-policejob.moneybag',
 		}
 	},
 
@@ -1291,11 +1405,51 @@ return {
 	},
 
 	["veh_engine"] = {
-		label = "Engine",
-		weight = 1000,
+		label = "EMS Upgrade, Level 0",
+		weight = 28000,
 		stack = true,
 		close = true,
-		description = "Upgrade vehicle engine",
+		description = "Upgrade vehicle engine (Level 0)",
+		client = {
+			image = "veh_engine.png",
+		}
+	},
+	["veh_engine1"] = {
+		label = "EMS Upgrade, Level 1",
+		weight = 28000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle engine (Level 1)",
+		client = {
+			image = "veh_engine.png",
+		}
+	},
+	["veh_engine2"] = {
+		label = "EMS Upgrade, Level 2",
+		weight = 28000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle engine (Level 2)",
+		client = {
+			image = "veh_engine.png",
+		}
+	},
+	["veh_engine3"] = {
+		label = "EMS Upgrade, Level 3",
+		weight = 28000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle engine (Level 3)",
+		client = {
+			image = "veh_engine.png",
+		}
+	},
+	["veh_engine4"] = {
+		label = "Illegal Engine ",
+		weight = 28000,
+		stack = true,
+		close = true,
+		description = "A special tuned upgrade vehicle engine (Level 4)",
 		client = {
 			image = "veh_engine.png",
 		}
@@ -1328,7 +1482,7 @@ return {
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Install vehicle turbo",
+		description = "Install vehicle turbo tuning",
 		client = {
 			image = "veh_turbo.png",
 		}
@@ -1686,11 +1840,41 @@ return {
 	},
 
 	["veh_brakes"] = {
-		label = "Brakes",
+		label = "Street Brakes",
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Upgrade vehicle brakes",
+		description = "Upgrade vehicle brakes (Level 0)",
+		client = {
+			image = "veh_brakes.png",
+		}
+	},
+	["veh_brakes1"] = {
+		label = "Sport Brakes",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle brakes (Level 1)",
+		client = {
+			image = "veh_brakes.png",
+		}
+	},
+	["veh_brakes2"] = {
+		label = "Race Brakes",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle brakes (Level 2)",
+		client = {
+			image = "veh_brakes.png",
+		}
+	},
+	["veh_brakes3"] = {
+		label = "Illegal Brakes",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "Upgrade vehicle brakes (Level 3)",
 		client = {
 			image = "veh_brakes.png",
 		}

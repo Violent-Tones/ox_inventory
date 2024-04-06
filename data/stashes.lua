@@ -1,14 +1,14 @@
 return {
-	{
+	{ -- Police Personal Locker Stash
 		coords = vec3(452.3, -991.4, 30.7),
 		target = {
 			loc = vec3(451.25, -994.28, 30.69),
 			length = 1.2,
 			width = 5.6,
 			heading = 0,
-			minZ = 29.49,
-			maxZ = 32.09,
-			label = 'Open personal locker'
+			minZ = 30.7 - 0.5,
+			maxZ = 30.7 + 0.5,
+			label = 'Open personal locker',
 		},
 		name = 'policelocker',
 		label = 'Personal locker',
@@ -18,16 +18,15 @@ return {
 		groups = shared.police
 	},
 
-	{
-		coords = vec3(301.3, -600.23, 43.28),
+	{ -- EMS Personal Locker Stash
 		target = {
-			loc = vec3(301.82, -600.99, 43.29),
-			length = 0.6,
-			width = 1.8,
+			loc = vec3(310.54, -597.27, 42.57),
+			length = 0.2,
+			width = 1.2,
 			heading = 340,
-			minZ = 43.34,
-			maxZ = 44.74,
-			label = 'Open personal locker'
+			minZ = 41.6,
+			maxZ = 42.47,
+			label = 'Open personal locker',
 		},
 		name = 'emslocker',
 		label = 'Personal Locker',
