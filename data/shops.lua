@@ -110,13 +110,25 @@ return {
 		blip = {
 			id = 110, colour = 84, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+			{ name = 'empty_evidence_bag', 	price = 0},
+			{ name = 'handcuffs', 			price = 5, count = 1000},
+			{ name = 'radio', 				price = 250, count = 100},
+			{ name = 'police_stormram', 	price = 1000, count = 250},
+			{ name = 'armor',				price = 750, count = 500},
+			{ name = 'heavyarmor',			price = 2000, count = 500},
+			{ name = 'ammo-9', 				price = 1 },
+			{ name = 'ammo-shotgun', 		price = 2 },
+			{ name = 'ammo-rifle', 			price = 3 },
+			{ name = 'WEAPON_FLASHLIGHT', 	price = 75 },
+			{ name = 'WEAPON_NIGHTSTICK', 	price = 150 },
+			{ name = 'WEAPON_STUNGUN', 		price = 175, 	metadata = { registered = true, serial = 'POL'} },
+			{ name = 'WEAPON_PISTOL', 		price = 350, 	metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 1 },
+			{ name = 'WEAPON_PUMPSHOTGUN', 	price = 750,	metadata = { registered = true, serial = 'POL'}, license = 'weapon', grade = 2 },
+			{ name = 'WEAPON_SMG', 			price = 1500,	metadata = { registered = true, serial = 'POL'}, license = 'weapon', grade = 2 },
+			{ name = 'WEAPON_CARBINERIFLE', price = 2500, 	metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+			{ name = 'at_flashlight', 		price = 375, grade = 1 },
+			{ name = 'at_scope_macro', 		price = 750, grade = 1 },
+			{ name = 'at_scope_medium', 	price = 1125, grade = 1 },
 		}, locations = {
 			vec3(451.51, -979.44, 30.68)
 		}, targets = {
@@ -124,20 +136,29 @@ return {
 		}
 	},
 
-	Medicine = {
-		name = 'Medicine Cabinet',
+	Medicine = { -- For qb-ambulancejob
+		name = 'Medical Armory',
 		groups = {
-			['ambulance'] = 0
+			['ambulance'] = 0,
 		},
-		blip = {
-			id = 403, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'medikit', price = 26 },
-			{ name = 'bandage', price = 5 }
-		}, locations = {
-			vec3(306.3687, -601.5139, 43.28406)
-		}, targets = {
-
+		inventory = {
+			{ name = 'radio', 						price = 100, count = 50 },
+			{ name = 'bandage', 					price = 50, count = 100 },
+			{ name = 'painkillers', 				price = 25, count = 100 },
+			{ name = 'firstaid', 					price = 100, count = 100 },
+			{ name = 'weapon_flashlight', 			price = 70, count = 50  },
+			{ name = 'weapon_fireextinguisher',		price = 175, count = 50 },
+		},
+		targets = {
+			{
+				loc = vec3(309.82, -602.85, 43.29),
+				length = 1.5,
+				width = 2.0,
+				heading = 70.0,
+				minZ = 42.89,
+				maxZ = 43.69,
+				distance = 3,
+			},
 		}
 	},
 
@@ -183,25 +204,39 @@ return {
 			['bennys'] = 0
 		},
 		inventory = {
-			{ name = 'veh_toolbox', 	  price = 500, 	count = 50},
-			{ name = 'veh_armor',         price = 5000, count = 50 },
-            { name = 'veh_brakes',        price = 5000, count = 50 },
-            { name = 'veh_engine',        price = 5000, count = 50 },
-            { name = 'veh_suspension',    price = 5000, count = 50 },
-            { name = 'veh_transmission',  price = 5000, count = 50 },
-            { name = 'veh_turbo',         price = 5000, count = 50 },
-            { name = 'veh_interior',      price = 5000, count = 50 },
-            { name = 'veh_exterior',      price = 5000, count = 50 },
+			{ name = 'veh_toolbox', 	  price = 500, 	 count = math.random(10, 50)},
+			{ name = 'veh_armor',         price = 7500,  count = math.random(25, 50) },
+			{ name = 'veh_armor1',        price = 12000, count = math.random(20, 45) },
+			{ name = 'veh_armor2',        price = 20000, count = math.random(15, 40) },
+			{ name = 'veh_armor3',        price = 35000, count = math.random(10, 35) },
+			{ name = 'veh_armor4',        price = 50000, count = math.random(5, 30) },
+            { name = 'veh_brakes',        price = 10000, count = math.random(25, 50) },
+			{ name = 'veh_brakes1',       price = 21500, count = math.random(15, 30) },
+			{ name = 'veh_brakes2',       price = 35000, count = math.random(5, 25) },
+            { name = 'veh_engine',        price = 8500, count = math.random(25, 50) },
+			{ name = 'veh_engine1',       price = 12500, count = math.random(20, 45) },
+			{ name = 'veh_engine2',       price = 18000, count = math.random(15, 35) },
+			{ name = 'veh_engine3',       price = 34500, count = math.random(10, 30) },
+            { name = 'veh_suspension',    price = 250, count = math.random(25, 50) },
+			{ name = 'veh_suspension1',   price = 1000, count = math.random(20, 45) },
+			{ name = 'veh_suspension2',   price = 3000, count = math.random(15, 40) },
+			{ name = 'veh_suspension3',   price = 5750, count = math.random(10, 35) },
+            { name = 'veh_transmission',  price = 15000, count = math.random(25, 50) },
+			{ name = 'veh_transmission1', price = 27500, count = math.random(20, 45) },
+			{ name = 'veh_transmission2', price = 40000, count = math.random(10, 30) },
+            { name = 'veh_turbo',         price = 50000, count = math.random(5, 25) },
+            { name = 'veh_interior',      price = 1000, count = 50 },
+            { name = 'veh_exterior',      price = 1000, count = 50 },
             { name = 'veh_wheels',        price = 5000, count = 50 },
-            { name = 'veh_neons',         price = 5000, count = 50 },
-            { name = 'veh_xenons',        price = 5000, count = 50 },
-            { name = 'veh_tint',          price = 5000, count = 50 },
-            { name = 'veh_plates',        price = 5000, count = 50 },
-            { name = 'nitrous',           price = 5000, count = 50 },
-            { name = 'tunerlaptop',       price = 5000, count = 50 },
-            { name = 'repairkit',         price = 5000, count = 50 },
-            { name = 'advancedrepairkit', price = 5000, count = 50 },
-            { name = 'tirerepairkit',     price = 5000, count = 50 },
+            { name = 'veh_neons',         price = 10000, count = 50 },
+            { name = 'veh_xenons',        price = 7500, count = 50 },
+            { name = 'veh_tint',          price = 500, count = 50 },
+            { name = 'veh_plates',        price = 200, count = 50 },
+            { name = 'nitrous',           price = 15000, count = 50 },
+            { name = 'tunerlaptop',       price = 10000, count = 50 },
+            { name = 'repairkit',         price = 500, count = 50 },
+            { name = 'advancedrepairkit', price = 2500, count = 50 },
+            { name = 'tirerepairkit',     price = 1500, count = 50 },
 		},
 		targets = {
 			{
@@ -215,6 +250,52 @@ return {
 				scenario = 'WORLD_HUMAN_CLIPBOARD',
 				loc = vec3(1930.19, 3721.37, 31.82),
 				heading = 206.87,
+			}
+		}
+	},
+
+	PrisonCanteen = {
+		name = 'Prison Canteen',
+		blip = {
+			id = 52,
+			colour = 0,
+			scale = 0.5
+		},
+		groups = {
+			['unemployed'] = 0,
+			['electrician'] = 0
+		},
+		inventory = {
+			{ name = 'sandwich', price = 5, count = 50 },
+			{ name = 'water_bottle', price = 3, count = 50 },
+		},
+		targets = {
+			{
+				ped = 's_m_m_armoured_01',
+				scenario = 'WORLD_HUMAN_CLIPBOARD',
+				loc = vec3(1777.59, 2560.52, 44.62),
+				heading = 187.83,
+				distance = 3.4,
+			}
+		}
+	},
+
+	TrapHouseDealer = {
+		name = 'Trap House Dealer',
+		inventory = {
+			{ name = 'black_money', price = 3, currency = 'panties'},
+			{ name = 'black_money', price = 1, currency = 'phone'},
+            { name = 'black_money', price = 1, currency = 'goldchain'},
+			{ name = 'black_money', price = 1, currency = 'rolex'},
+			{ name = 'black_money', price = 1, currency = 'diamond_ring'},
+			{ name = 'lockpick', price = 150, currency = 'black_money' },
+        },
+		targets = {
+			{
+				ped = `player_two`,
+				scenario = 'WORLD_HUMAN_LEANING_CASINO_TERRACE',
+				loc = vector3(-1211.06, -1308.46, -33.65),
+				heading = 265.66,
 			}
 		}
 	}
