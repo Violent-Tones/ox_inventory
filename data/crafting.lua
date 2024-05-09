@@ -1,5 +1,6 @@
 return {
 	{
+		groups = { ['mechanic'] = 0 },
 		items = {
 			{
 				name = 'lockpick',
@@ -28,7 +29,79 @@ return {
 				distance = 1.5,
 				rotation = 70.0,
 			},
+		}
+	},
+	-- Chihuahua hotdogs bench
+	{
+		label = 'Open Chihuahua Combine Station',
+		groups = { ['chihuahua'] = 0 },
+		items = {
+			{
+				name = 'raw_bacon_wiener',
+				ingredients = {
+					raw_wiener = 1,
+					raw_bacon = 1,
+				},
+				duration = 3000,
+				count = 1,
+			},
+			{
+				name = 'hotdog_plain',
+				ingredients = {
+					hotdog_bun = 1,
+					grilled_wiener = 1,
+				},
+				duration = 5000,
+				count = 1,
+			},
+			{
+				name = 'hotdog_bacon_plain',
+				ingredients = {
+					grilled_bacon_wiener = 1,
+					hotdog_bun = 1,
+				},
+				duration = 2000,
+				count = 1,
+			},
+			{
+				name = 'hotdog_classic',
+				ingredients = {
+					hotdog_plain = 1,
+					mustard = 0.05
+				},
+				duration = 2000,
+				count = 1,
+			},
+			{
+				name = 'hotdog_tijuana',
+				ingredients = {
+					hotdog_bacon_plain = 1,
+					sliced_onion_grilled = 1
+				},
+				duration = 2000,
+				count = 1,
+			},
+			{
+				name = 'hotdog_chicago',
+				ingredients = {
+					hotdog_classic = 1,
+					diced_onion = 1,
+					sliced_tomato = 1,
+					pickle_spear = 1,
+				},
+				duration = 5000,
+				count = 1,
+			},
 		},
-		blip = { id = 566, colour = 31, scale = 0.8 },
+		points = {
+			vector3(39.99, -1007.23, 29.26),
+		},
+		zones = {
+			{
+				coords = vector3(39.99, -1007.23, 29.26),
+				size = vec3(1,1,1),
+				distance = 1.5
+			},
+		},
 	},
 }
