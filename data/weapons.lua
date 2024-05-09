@@ -226,8 +226,7 @@ return {
 
 		['WEAPON_FIREEXTINGUISHER'] = {
 			label = 'Fire Extinguisher',
-			weight = 8616,
-            durability = 0.006
+			weight = 4500,
 		},
 
 		['WEAPON_FIREWORK'] = {
@@ -1849,7 +1848,7 @@ return {
 
 		['ammo-rifle'] = {
 			label = '5.56x45',
-			weight = 4,
+			weight = 12,
 		},
 
 		['ammo-rifle2'] = {

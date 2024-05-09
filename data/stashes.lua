@@ -137,7 +137,84 @@ return {
 		label = 'Beeker\'s Garage Stash',
 		owner = false,
 		slots = 70,
-		weight = 120000,
+		weight = 1000000,
 		groups = {['beeker'] = 0}
+	},
+	{ -- Chihuahua Hotdogs Fridge/Stash
+		coords = vec3(43.8111, -1008.3824, 29.2872),
+		target = {
+			loc = vec3(43.5, -1009.2, 28.0),
+			length = 1.1,
+			width = 1.2,
+			heading = -20,
+			minZ = -1,
+			maxZ = 1,
+			label = 'Open Fridge',
+			icon = 'fas fa-box-open',
+			drawSprite = true,
+		},
+		name = 'chihuahua_fridge',
+		label = 'Chihuahua Hotdogs Fridge',
+		owner = false,
+		slots = 70,
+		weight = 750000,
+		groups = { ['chihuahua'] = 0, }
+	},
+	-- Boss Stashes
+	{ -- police
+		coords = vector3(448.61, -972.65, 30.69),
+		name = 'boss_cardealer',
+		label = 'Police Boss Stash',
+		owner = false,
+		slots = 50,
+		weight = 1000000,
+		groups = {['police'] = 4}
+	},
+	{ -- ambulance
+		coords = vector3(335.12, -570.4, 43.32),
+		name = 'boss_ambulance',
+		label = 'Ambulance Boss Stash',
+		owner = false,
+		slots = 50,
+		weight = 1000000,
+		groups = {['ambulance'] = 4}
+	},
+	{ -- realestate
+		coords = vector3(-698.83, 271.28, 83.11),
+		name = 'boss_realestate',
+		label = 'Real Estate Boss Stash',
+		owner = false,
+		slots = 50,
+		weight = 1000000,
+		groups = {['realestate'] = 4}
+	},
+
+	{ -- taxi
+		coords = vector3(900.31, -171.48, 74.08),
+		name = 'boss_taxi',
+		label = 'Taxi Boss Stash',
+		owner = false,
+		slots = 50,
+		weight = 1000000,
+		groups = {['taxi'] = 4}
+	},
+	{ -- cardealer
+		coords = vector3(-29.96, -1106.99, 26.42),
+		name = 'boss_cardealer',
+		label = 'Car Dealer Boss Stash',
+		owner = false,
+		slots = 50,
+		weight = 1000000,
+		groups = {['cardealer'] = 4}
+	},
+
+	{ -- mechanic
+		coords = vector3(-344.96, -123.13, 39.01),
+		name = 'boss_mechanic',
+		label = 'Mechanic Boss Stash',
+		owner = false,
+		slots = 50,
+		weight = 1000000,
+		groups = {['mechanic'] = 4}
 	},
 }

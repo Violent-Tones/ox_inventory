@@ -144,6 +144,7 @@ return {
 		weight = 190,
 		stack = false,
 		consume = 0,
+		description = 'Your gateway to infinite knowledge, questionable life choices, and the art of ignoring calls while browsing cat videos.',
 		client = {
 			add = function(total)
 				if total > 0 then
@@ -161,6 +162,7 @@ return {
 
 	['money'] = {
 		label = 'Money',
+		description = 'This stack of crisp, green promises might open doors, or just as easily close them - handle with care and a hint of mischief.'
 	},
 
 	['mustard'] = {
@@ -2196,6 +2198,236 @@ return {
 		description = "Citation from a police officer!",
 		client = {
 			image = "citation.png",
+		}
+	},
+
+	-- Chihuahua job
+	['raw_wiener'] = {
+		label = 'Raw Wiener',
+		weight = 110,
+		stack = true,
+		degrade = 30,
+		decay = true,
+		description = 'A humble, pink mystery meat tube, that silently aspires to hot dog greatness while serving as a stark reminder of more ambitious grocery trips forgotten.',
+		consume = 1,
+		-- allowArmed: false,
+		-- server = {export = },
+	},
+	['grilled_wiener'] = {
+		label = 'Grilled Wiener',
+		weight = 95,
+		stack = false,
+		degrade = 40,
+		decay = true,
+		description = 'The pinnacle of haute cuisine, charred to perfection, and guaranteed to make any gourmet chef weep with envy... or something like that.',
+		consume = 1,
+		client = {
+			status = { hunger = 5},
+			usetime = 2000,
+		}
+	},
+	['raw_bacon'] = {
+		label = 'Raw Bacon',
+		weight = 15,
+		stack = true,
+		degrade = 30,
+		decay = true,
+		description = 'It\'s raw bacon',
+		client = {
+			status = { hunger = 2},
+			useTime = 1000,
+		}
+	},
+	['raw_bacon_wiener'] = {
+		label = 'Raw Bacon Wrapped Wiener',
+		weight = 125,
+		stack = true,
+		degrade = 30,
+		decay = true,
+		description = 'An uncooked wiener wrapped in raw bacon',
+		client = {
+			status = { hunger = 3 },
+			useTime = 1000,
+		}
+	},
+	['grilled_bacon_wiener'] = {
+		label = 'Grilled Bacon Wrapped Wiener',
+		weight = 125,
+		stack = true,
+		degrade = 45,
+		decay = true,
+		description = 'A grilled wiener wrapped in crispy bacon.',
+		client = {
+			status = { hunger = 10 },
+			useTime = 1000,
+		}
+	},
+	['hotdog_bun'] = {
+		label = 'Hotdog Bun',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'It\'s a hotdog bun.',
+		client = {
+			status = { hunger = 1 },
+			useTime = 1000,
+		}
+	},
+	['hotdog_plain'] = {
+		label = 'Plain Hotdog',
+		weight = 60,
+		stack = true,
+		degrade = 60,
+		decay = true,
+		description = 'plain hotdog',
+		client = {
+			status = { hunger = 10 },
+			useTime = 1000,
+		}
+	},
+	['hotdog_bacon_plain'] = {
+		label = 'Plain Bacon Hotdog',
+		weight = 60,
+		stack = true,
+		degrade = 60,
+		decay = true,
+		description = 'plain bacon hotdog',
+		client = {
+			status = { hunger = 15 },
+			useTime = 1000,
+		}
+	},
+	['hotdog_tijuana'] = {
+		label = 'Tijuana Hotdog',
+		weight = 60,
+		stack = true,
+		degrade = 60,
+		decay = true,
+		description = 'tijuana hotdog',
+		client = {
+			status = { hunger = 35 },
+			useTime = 1000,
+		}
+	},
+	['hotdog_classic'] = {
+		label = 'Classic Hotdog',
+		weight = 60,
+		stack = true,
+		degrade = 60,
+		decay = true,
+		description = 'Classic hotdog',
+		client = {
+			status = { hunger = 30 },
+			useTime = 1000,
+		}
+	},
+	['hotdog_chicago'] = {
+		label = 'Chicago Hotdog',
+		weight = 60,
+		stack = true,
+		degrade = 60,
+		decay = true,
+		description = 'chicago hotdog',
+		client = {
+			status = { hunger = 45 },
+			useTime = 1000,
+		}
+	},
+	['raw_onion'] = {
+		label = 'Onion (Raw)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'onion (raw)',
+		client = {
+			status = { hunger = 1 },
+			useTime = 1000,
+		}
+	},
+	['sliced_onion'] = {
+		label = 'Onion (Sliced)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'onion (sliced)',
+		client = {
+			status = { hunger = 2 },
+			useTime = 1000,
+		}
+	},
+	['sliced_onion_grilled'] = {
+		label = 'Grilled Onion (Sliced)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'grilled onion (sliced)',
+		client = {
+			status = { hunger = 4 },
+			useTime = 1000,
+		}
+	},
+	['diced_onion'] = {
+		label = 'Onion (Diced)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'Onions (diced)',
+		client = {
+			status = { hunger = 3 },
+			useTime = 1000,
+		}
+	},
+	['raw_tomato'] = {
+		label = 'Tomato (Raw)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'Tomato (raw)',
+		client = {
+			status = { hunger = 1 },
+			useTime = 1000,
+		}
+	},
+	['sliced_tomato'] = {
+		label = 'Tomato (sliced)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'Tomato (sliced)',
+		client = {
+			status = { hunger = 2 },
+			useTime = 1000,
+		}
+	},
+	['pickle'] = {
+		label = 'Pickle',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'pickle',
+		client = {
+			status = { hunger = 5 },
+			useTime = 1000,
+		}
+	},
+	['pickle_spear'] = {
+		label = 'Pickle (Spear)',
+		weight = 60,
+		stack = true,
+		degrade = 35,
+		decay = true,
+		description = 'pickle spear',
+		client = {
+			status = { hunger = 1 },
+			useTime = 1000,
 		}
 	},
 }

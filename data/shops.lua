@@ -298,5 +298,49 @@ return {
 				heading = 265.66,
 			}
 		}
+	},
+
+	Dealer_Dimebag_Danny = {
+		name = 'Dealer Dimebag Danny',
+		locations = {
+			vector3(362.18, -2029.42, 22.4),
+		},
+		inventory = {
+			{ name = 'weed_skunk', 				price = 5,   count = 100, metadata = { minrep = 0 } },
+			{ name = 'weed_whitewidow', 		price = 10,  count = 100, metadata = { minrep = 20 } },
+			{ name = 'weed_ogkush', 			price = 15,  count = 100, metadata = { minrep = 40 } },
+			{ name = 'weed_purplehaze', 		price = 20,  count = 100, metadata = { minrep = 60 } },
+			{ name = 'weed_amnesia', 			price = 25,  count = 100, metadata = { minrep = 80 } },
+			{ name = 'weed_ak47', 				price = 30,  count = 25,  metadata = { minrep = 100 } },
+			{ name = 'weed_skunk_seed' , 		price = 50,  count = 25,  metadata = { minrep = 120 } },
+			{ name = 'weed_whitewidow_seed', 	price = 100, count = 10,  metadata = { minrep = 140 } },
+        },
+	},
+
+	-- Chihuahua Hotdogs Job
+	ChihuahuaHotdogsWarehouse = {
+		name = 'Chihuahua Hotdogs Warehouse',
+		inventory = {
+			{ name = 'raw_wiener', price = 3 },
+			{ name = 'raw_bacon', price = 2 },
+			{ name = 'hotdog_bun', price = 1 },
+			{ name = 'raw_onion', price = 1 },
+			{ name = 'raw_tomato', price = 1 },
+			{ name = 'pickle', price = 1 },
+			{ name = 'mustard', price = 1},
+			{ name = 'paperbag', price = 1},
+			{ name = 'WEAPON_FIREEXTINGUISHER', price = 1000, }
+		},
+		locations = {
+			vec3(39.1783, -1008.8282, 29.4817),
+		},
+		targets = {
+			{
+				ped = 'mp_m_shopkeep_01',
+				scenario = 'WORLD_HUMAN_AA_COFFEE',
+				loc = vec3(39.1783, -1008.8282, 28.4817),
+				heading = 68.1160,
+			}
+		}
 	}
 }
