@@ -2521,15 +2521,16 @@ return {
 			end
 		}
 	},
+
 	['cigarette'] = {
 		label = 'Rebel Reds Cigarette',
 		weight = 1,
 		stack = true,
 	},
-	['cigarettepack'] {
+	['cigarettepack'] = {
 		label = 'Pack of Rebel Reds Cigarettes',
 		weight = 1,
 		stack = false,
 		close = false,
-	}
+	},
 }
