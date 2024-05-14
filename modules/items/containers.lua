@@ -63,4 +63,10 @@ setContainerProperties('pizzabox', {
 	whitelist = { 'pizza' }
 })
 
+setContainerProperties('cigarettepack', {
+	slots = 1,
+	maxWeight = 20,
+	whitelist = { 'cigarette' }
+})
+
 return containers

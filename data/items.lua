@@ -139,27 +139,6 @@ return {
 		weight = 160,
 	},
 
-	['phone'] = {
-		label = 'Phone',
-		weight = 190,
-		stack = false,
-		consume = 0,
-		description = 'Your gateway to infinite knowledge, questionable life choices, and the art of ignoring calls while browsing cat videos.',
-		client = {
-			add = function(total)
-				if total > 0 then
-					pcall(function() return exports.npwd:setPhoneDisabled(false) end)
-				end
-			end,
-
-			remove = function(total)
-				if total < 1 then
-					pcall(function() return exports.npwd:setPhoneDisabled(true) end)
-				end
-			end
-		}
-	},
-
 	['money'] = {
 		label = 'Money',
 		description = 'This stack of crisp, green promises might open doors, or just as easily close them - handle with care and a hint of mischief.'
@@ -1144,7 +1123,7 @@ return {
 
 	["cryptostick"] = {
 		label = "Crypto Stick",
-		weight = 200,
+		weight = 50,
 		stack = false,
 		close = true,
 		description = "Why would someone ever buy money that doesn't exist.. How many would it contain..?",
@@ -2430,4 +2409,127 @@ return {
 			useTime = 1000,
 		}
 	},
+	-- For Quasar-phone (qs-phone)
+	["phone_dongle"] = {
+		label = "Phone Dongle",
+		weight = 50,
+		stack = false,
+	},
+	["powerbank"] = {
+		label = "Power Bank",
+		weight = 50,
+		stack = false,
+	},
+	['phone'] = {
+		label = 'Classic Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['black_phone'] = {
+		label = 'Black Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['yellow_phone'] = {
+		label = 'Yellow Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['red_phone'] = {
+		label = 'Red Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['green_phone'] = {
+		label = 'Green Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+
+	['white_phone'] = {
+		label = 'White Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+	['cigarette'] = {
+		label = 'Rebel Reds Cigarette',
+		weight = 1,
+		stack = true,
+	},
+	['cigarettepack'] {
+		label = 'Pack of Rebel Reds Cigarettes',
+		weight = 1,
+		stack = false,
+		close = false,
+	}
 }
