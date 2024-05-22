@@ -2,7 +2,7 @@ if not lib then return end
 
 local Inventory = {}
 
-Inventory.Dumpsters = {218085040, 666561306, -58485588, -206690185, 1511880420, 682791951}
+Inventory.Dumpsters = {218085040, 666561306, -58485588, -206690185, 1511880420, 682791951, 1437508529, -228596739, -1426008804, -1096777189}
 
 function Inventory.OpenDumpster(entity)
 	local netId = NetworkGetEntityIsNetworked(entity) and NetworkGetNetworkIdFromEntity(entity)
@@ -80,7 +80,27 @@ if shared.target then
 	exports.ox_target:addModel(Inventory.Dumpsters, {
         icon = 'fas fa-dumpster',
         label = locale('search_dumpster'),
-        onSelect = function(data) return Inventory.OpenDumpster(data.entity) end,
+        onSelect = function(data)
+			local ped = PlayerPedId()
+			local dict = 'anim@gangops@facility@servers@bodysearch@'
+			local anim = 'player_search'
+			lib.requestAnimDict(dict)
+			TaskPlayAnim(ped,dict,anim,2.0,-2.0,-1,49,0, true, false, true)
+			local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
+			Skillbar.Start({
+				duration = math.random(3000, 5000), -- how long the skillbar runs for
+				pos = math.random(10, 30), -- how far to the right the static box is
+				width = math.random(10, 20), -- how wide the static box is
+			}, function()
+				StopAnimTask(ped, dict, anim, 1.0)
+				return Inventory.OpenDumpster(data.entity)
+			end, function()
+				StopAnimTask(ped, dict, anim, 1.0)
+				return nil
+			end)
+
+
+		end,
         distance = 2
 	})
 
