@@ -343,5 +343,62 @@ return {
 				heading = 68.1160,
 			}
 		}
-	}
+	},
+	PetShop = {
+        blip = {
+            id = 463, colour = 31, scale = 1.1
+        },
+        name = 'Pet Shop',
+        inventory = {
+            -- { name = 'petfood',                 price = 500, },
+            { name = 'collarpet',               price = 10000, },
+            -- { name = 'firstaidforpet',          price = 2000, },
+            { name = 'petnametag',              price = 5000, },
+            -- { name = 'petwaterbottleportable',  price = 500, },
+            { name = 'petgroomingkit',          price = 75000, },
+            { name = 'keepcompanionwesty',      price = 1000000, count = 5, },
+			{ name = 'keepcompanionpoodle',     price = 1250000, count = 5, },
+            { name = 'keepcompanionpug',        price = 1350000, count = 5, },
+            { name = 'keepcompanionrottweiler', price = 1500000, count = 5, },
+            { name = 'keepcompanionretriever',  price = 1600000, count = 5, },
+            { name = 'keepcompanionhusky',      price = 1750000, count = 5, },
+            { name = 'keepcompanionshepherd',   price = 1750000, count = 5, },
+            { name = 'keepcompanioncat',        price = 1800000, count = 10, },
+            { name = 'keepcompanionhen',        price = 650000, count = 10, },
+            { name = 'keepcompanionrat',        price = 550000, count = 10, },
+            { name = 'keepcompanionrabbit',     price = 800000, count = 20, },
+        },
+        locations = {
+
+        },
+        targets = {
+            {
+                ped = `cs_guadalope`,
+                scenario = 'WORLD_HUMAN_STAND_IMPATIENT',
+                loc = vector3(562.21, 2741.6, 41.87),
+                heading = 183.65,
+                distance = 3.0,
+            },
+        }
+    },
+    Poacher = {
+        name = 'Poacher',
+        inventory = {
+            { name = 'keepcompanionmtlion',  price = 2000000, count = 5, }, --currency = 'black_money', },
+            { name = 'keepcompanionmtlion2', price = 3000000, count = 5, }, --currency = 'black_money', },
+            { name = 'keepcompanioncoyote',  price = 1500000, count = 5, }, --currency = 'black_money', },
+        },
+        locations = {
+
+        },
+        targets = {
+            {
+                ped = `csb_cletus`,
+                scenario = 'PROP_HUMAN_SEAT_BENCH',
+                loc = vector3(1540.61, 6323.53, 23.45),
+                heading = 163.86,
+                distance = 3.0,
+            },
+        }
+    },
 }
