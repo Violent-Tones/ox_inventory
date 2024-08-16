@@ -8,6 +8,7 @@ return {
 			{ name = 'water', price = 10 },
 			{ name = 'phone', price = 850 },
 			{ name = 'powerbank', price = 100 },
+			{ name = 'rolling_paper', price = 1 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -41,6 +42,7 @@ return {
 			{ name = 'water', price = 10 },
 			{ name = 'cola', price = 10 },
 			{ name = 'burger', price = 15 },
+			{ name = 'rolling_paper', price = 1 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -307,12 +309,54 @@ return {
 			vector3(362.18, -2029.42, 22.4),
 		},
 		inventory = {
-			{ name = 'weed_skunk', 			price = 5,   count = 100, metadata = { minrep = 0 } },
-			{ name = 'weed_purplehaze', 	price = 10,  count = 100, metadata = { minrep = 5 } },
-			{ name = 'weed_whitewidow', 	price = 15,  count = 100, metadata = { minrep = 10 } },
-			{ name = 'weed_ogkush', 		price = 20,  count = 75, metadata = { minrep = 20 } },
-			{ name = 'weed_ak47', 			price = 25,  count = 25, metadata = { minrep = 30 } },
-			{ name = 'weed_amnesia', 		price = 30,  count = 25,  metadata = { minrep = 40 } },
+			{ name = 'weed', price = 5, count = 100, metadata = {
+				label = 'Skunk',
+				strain = 'Skunk',
+				type = 'Common',
+				image = 'weed_common',
+				description = "Maybe if you smoke enough you'll feel something (maybe).",
+				minrep = 0
+			}},
+			{ name = 'weed', price = 10, count = 100, metadata = {
+				label = 'Purple Haze',
+				strain = 'Purple Haze',
+				type = 'Uncommon',
+				image = 'weed_uncommon',
+				description = "This one will help you relax.",
+				minrep = 5
+			}},
+			{ name = 'weed', price = 15,  count = 100, metadata = {
+				label = 'White Widow',
+				strain = 'White Widow',
+				type = 'Uncommon',
+				image = 'weed_uncommon',
+				description = "You're gonna need to smoke a lot of this before you get into a fight.",
+				minrep = 10
+			}},
+			{ name = 'weed', price = 500,  count = 75, metadata = {
+				label = 'OG Kush',
+				strain = 'OG Kush',
+				type = 'Rare',
+				image = 'weed_rare',
+				description = "This is a nice blend but more relaxing.",
+				minrep = 20
+			}},
+			{ name = 'weed', price = 1000,  count = 45, metadata = {
+				label = 'AK47',
+				strain = 'AK47',
+				type = 'Epic',
+				image = 'weed_epic',
+				description = "For taking out the ops.",
+				minrep = 30
+			}},
+			{ name = 'weed', 		price = 2000,  count = 25,  metadata = {
+				label = 'Amnesia',
+				strain = 'Amnesia',
+				type = 'Legendary',
+				image = 'weed_legendary',
+				description = "This will help you forget about all your problems.",
+				minrep = 40
+			}},
 			-- { name = 'weed_skunk_seed' , 		price = 50,  count = 25,  metadata = { minrep = 120 } },
 			-- { name = 'weed_whitewidow_seed', 	price = 100, count = 10,  metadata = { minrep = 140 } },
         },
